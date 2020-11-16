@@ -1,0 +1,148 @@
+
+<!DOCTYPE html >
+<html>
+<div id="example1">
+    <div id="example2">
+
+        <head>
+            {% load static %}
+            <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}" />
+            <title>SYMCheck</title>
+
+            <div class="container">
+                <div>
+                    <img src="{% static  'images/SymCheckIcon_Prefab.PNG' %}" alt="HomeLogo"
+                        style="width: 100%;height:87px; max-width: 651px;" />
+                </div>
+                <div class="banner">
+                </div>
+
+                <div class="rowContainer">
+                    <a href="{% url 'Homepage' %}">
+                        <button class="btnHome">
+                            Home
+                        </button>
+                    </a>
+                    <a href="{% url 'Imagepage' %}">
+                        <button class="btnNew">
+                            New Diagnosis
+                        </button>
+                    </a>
+
+                </div>
+
+
+            </div>
+
+
+        </head>
+
+        <body>
+            <div class="container">
+                <div class="body">
+                    <div class="txtInfo">
+                        Results
+                    </div>
+
+                    <div class="txtBoxResult">
+                        Based on the submission you provided,
+                        the image indicates you may have
+                        {{ label }} with a confidence of {{ confidence|floatformat:"2" }}.
+                    </div>
+
+                    <div class="txtInfo">
+                        About
+                    </div>
+                    <div class="txtBoxAbout">
+                        {% if label == "Chickenpox" %}
+                        <div>Chickenpox is a highly contagious disease caused by the varicella-zoster virus (VZV). It can cause an itchy, blister-like rash. The rash first appears on the chest, back, and face, and then spreads over the entire body, causing between 250 and 500 itchy blisters. Chickenpox can be serious, especially in babies, adolescents, adults, pregnant women, and people with a weakened immune system. The best way to prevent chickenpox is to get the chickenpox vaccine.
+                            Chickenpox used to be very common in the United States. In the early 1990s, an average of 4 million people got chickenpox, 10,500 to 13,000 were hospitalized, and 100 to 150 died each year.
+                            Chickenpox vaccine became available in the United States in 1995. Each year, more than 3.5 million cases of chickenpox, 9,000 hospitalizations, and 100 deaths are prevented by chickenpox vaccination in the United States.
+                            <Br> For more information, check out the <a href ="https://www.cdc.gov/chickenpox/about/index.html">CDC website</a> concerning Chicken pox. </div>
+                        {% elif label == "PinkEye" %}
+                             <div>Conjunctivitis, also known as Pink Eye, is an inflammation of the conjunctiva. The conjunctiva is the thin clear tissue that lies over the white part of the eye and lines the inside of the eyelid.
+                                 Children get it a lot. It can be highly contagious (it spreads rapidly in schools and day cares), but it’s rarely serious. It's very unlikely to damage your vision, especially if you find it and treat it quickly. When you take care to prevent its spread and do all the things your doctor recommends, Pink Eye clears up with no long-term problems.
+                                 <Br> For more information, check out the <a href ="https://www.cdc.gov/conjunctivitis/index.html">CDC website</a> concerning Pink Eye.</div>
+                        {% elif label == "Normal_Skin" %}
+                             <div>Algorithm concluded that no visual injure or illness is represented on the skin visible in the image.</div>
+                        {% elif label == "Normal_eye" %}
+                             <div>Algorithm concluded that no visual injure or illness is represented on the eye visible in the image.</div>
+                        {% else %}
+                          <div>Your session has been lost. Please click on the "New Diagnosis" button and resubmit your image for a proper diagnosis!</div>
+                        {% endif %}
+                    </div>
+                    <div class="txtInfo">
+                        When to see a Doctor
+                    </div>
+                    <div class="txtBoxDoc">
+                        {% if label == "Chickenpox" %}
+                        If you or your child does end up having chickenpox, treatment isn't always necessary, especially when a case is mild.
+                        However, the CDC recommends getting medical attention if you are at higher risk of having complications, including those who:
+
+                        <ul>
+                            <li>Are pregnant</li>
+                            <li>Are immunocompromised</li>
+                            <li>Are younger than one year old</li>
+                            <li>Are older than 12 years old, since chickenpox can be more severe in adults</li>
+                        </ul>
+                        {% elif label == "PinkEye" %}
+                        Although most cases of pink eye go away without a doctor’s care, there are some times when you should see your doctor as soon as possible for Pink Eye symptoms. Your doctor may prescribe eye drops to help relieve the symptoms or to treat bacterial conjunctivitis. Times when you should see a doctor for Pink Eye include:
+                        <ul>
+                            <li>You have a depressed or weakened immune system, which makes it harder to fight infections.</li>
+                            <li>You develop pain in one or both eyes.</li>
+                            <li>You develop a sensitivity to light.</li>
+                            <li>Your vision becomes blurry.</li>
+                            <li>Your symptoms continue or worsen.</li>
+                            <li>You are using antibiotic drops for a bacterial infection and the symptoms are not going away.</li>
+                            <li>You develop a fever and other signs of an infection, such as swollen glands or fatigue.</li>
+                            <li>You have an eye condition unrelated to conjunctivitis.</li>
+                        </ul>
+                        {% elif label == "Normal_eye" %}
+                        As stated above, it appears that the eye is normal. However, if you are experiencing any of the following symptoms you may wish to seek a medical professional:
+                        <ul>
+                            <li>Extream Pressure</li>
+                            <li>Accute pain</li>
+                            <li>Flashes</li>
+                            <li>Tubular vision (Tunnel vision: Loss of peripherals)</li>
+                            <li>Visual Snow (Or Visual Static)</li>
+                        </ul>
+
+                        {% elif label == "Normal_Skin" %}
+                        As stated above, it appears that the skin is normal. However, if you are experiencing any of the following symptoms you may wish to seek a medical professional:
+                        <ul>
+                            <li>Buring/itching sensation</li>
+                            <li>Numbness</li>
+                            <li>Accute Pain with or without Stimuli</li>
+                        </ul>
+                        {% endif %}
+
+                        <!--Call a healthcare provider if: <br>
+
+                        -You never received a vaccine<br>
+                        -Symptoms worsen within 24hrs<br>
+                        Etc... -->
+                    </div>
+                    <div class="txtInfo">
+                        Nearby Healthcare Facilities
+                    </div>
+                    <div class="txtBoxNearby">
+                        If you would like to find healthcare facilities
+                        near you, please click on the button
+                        "Find Nearest Emergency Room"
+                    </div>
+                    <button class="btnNearby">
+                        FIND NEAREST EMERGENCY ROOM
+                    </button>
+                    <br>
+                    <div class="txtInfo">
+                        Feedback
+                    </div>
+                    <p style="margin-bottom: 40px;">Contact us <a href="mailto: symcheckapp@gmail.com">Here</a> for any
+                        questions or comments for our team</p>
+                </div>
+            </div>
+        </body>
+    </div>
+</div>
+
+</html>

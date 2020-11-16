@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<div id="bkg">
+    <div id="whitebkg">
+        <head>
+            {% load static %}
+            <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}"/>
+            <title>SYMCheck</title>
+            <div style="text-align: center;">
+                <img src="{% static  'images/LH.PNG' %}" alt="HomeLogo" style="width:275px;height:200px;"/>
+            </div>
+
+        </head>
+
+        <body>
+
+        <div style="text-align: center;">
+
+            <!--<h1>This is Charan... !</h1> -->
+            <img src="{% static  'images/NiceBox.PNG' %}" alt="NiceBox"
+                 style="max-width:100%;widows: 330px;height:250px;"/>
+        </div>
+        <div>
+
+            <p class="headingHome">Welcome to SymCheck, an online image diagnosis application that will help you
+                identify what illness you may have. Our site and algorithm,
+                made with Django and tensorflow, has an accuracy of over 85%
+                and can help you make an informed decision on if or when you may
+                need a medical professional.</p>
+        </div>
+        <div style="text-align: center;">
+            <a href="{% url 'Imagepage'%}">Get Diagnosis Now ></a>
+        </div>
+
+        </body>
+    </div>
+</div>
+</html>
