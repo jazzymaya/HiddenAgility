@@ -13,6 +13,10 @@
                 <div class="banner">
                 </div>
                 <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}"/>
+                <script src="{% static 'js/script.js' %}"></script>
+                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGtBOJljLfXZwob9rXplHr9fy6P5bH5DA&callback=initMap&libraries=places"
+                 defer>
+                </script>
             </div>
 
 
@@ -23,17 +27,24 @@
             <div class="body">
                 <div class="textcenter">
                     <h5 style="color:red; text-align: center ;min-width: 90%;">** IF YOUR ARE HAVING TROUBLE BREATHING,
-                        HAVE CHEST PAINS, OR SEVERE BLEEDING, PLEASE HEAD TO THE NEREST EMERGENCY ROOM**</h5>
+                        HAVE CHEST PAINS, OR SEVERE BLEEDING, PLEASE HEAD TO THE NEAREST EMERGENCY ROOM**</h5>
                 </div>
 
-                <button class="btnNearby">
+                <button class="btnNearby" onclick="openMap()">
                     FIND NEAREST EMERGENCY ROOM
                 </button>
+
+                <div class="form-popup" id="MyMap">
+                    <div class="popup">
+                        <button class="btnNearby" onclick="closeMap()">
+                            Back
+                        </button>
+                        <div id="map"></div>
+                    </div>
+                </div>
                 <div style="justify-items: center; margin-right: auto; margin-left: auto; margin-top: 30%; ">
 
                     <form method="post" enctype="multipart/form-data"> <!--Upload Image to media file-->
-                        <!-- <form method="post" enctype="multipart/formdata" action = "results"> -->
-                        <!-- next page only-->
                         {%csrf_token%}
                         <a><input type="file" name="image" accept="image/x-png,image/jpeg" required/></a>
                         <!--Only allow png or jpeg files, so far browse only-->

@@ -168,6 +168,14 @@
     flex-direction: column;
 
 }
+.popup {
+    background-color: white;
+}
+.form-popup {
+    display: none;
+    position: fixed;
+    border: 3px solid #f1f1f1;
+}
 
 #example1 {
     background: url("Background_WebPage_001.png");
@@ -216,3 +224,7 @@
     width: auto;
     height: 100vh;
 }
+#map {
+    height: 500px;
+    width: 500px;
+  }

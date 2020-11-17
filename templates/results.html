@@ -7,6 +7,10 @@
         <head>
             {% load static %}
             <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}" />
+            <script src="{% static 'js/script.js' %}"></script>
+                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGtBOJljLfXZwob9rXplHr9fy6P5bH5DA&callback=initMap&libraries=places"
+                 defer>
+                </script>
             <title>SYMCheck</title>
 
             <div class="container">
@@ -39,6 +43,14 @@
 
         <body>
             <div class="container">
+                        <div class="form-popup" id="MyMap" >
+                <div class="popup">
+                    <button class="btnNearby" onclick="closeMap()">
+                        Back
+                    </button>
+                    <div id="map"></div>
+                </div>
+            </div>
                 <div class="body">
                     <div class="txtInfo">
                         Results
@@ -130,14 +142,14 @@
                         near you, please click on the button
                         "Find Nearest Emergency Room"
                     </div>
-                    <button class="btnNearby">
+                    <button class="btnNearby" onclick="openMap()">
                         FIND NEAREST EMERGENCY ROOM
                     </button>
                     <br>
                     <div class="txtInfo">
                         Feedback
                     </div>
-                    <p style="margin-bottom: 40px;">Contact us <a href="mailto: symcheckapp@gmail.com">Here</a> for any
+                    <p style="margin-bottom: 40px;">Contact us <a href="mailto: symcheckapp@gmail.com?subject=Feedback for SymCheck&body=Dear SymCheck Team,">Here</a> for any
                         questions or comments for our team</p>
                 </div>
             </div>
