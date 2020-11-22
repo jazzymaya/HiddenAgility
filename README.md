@@ -8,6 +8,7 @@ Our application is structed as follows:
 | TeamPhotos   | This folder contains the images of each team member that is used on the Wiki page.                                                                                                                              |
 | pycache | This folder contains bytecode-compiled and optimized bytecode-compiled versions of our program's files.
 | djangoProject1 | This folder contains important Django files such as settings.py, urls.py, and our static folder.
+| media | This folder holds all the user uploaded images that was submitted via the imageuploadpage. If you delete this folder, a new one will automatically generate when a user uploads another image. 
 | models | This folder contains our Machine Learning model in .h5 format.
 | templates | This folder contains the HTML files for our homepage, imageuploadpage, and resultspage. 
 | db.sqlite3 | This is the default Django database file created during the creation of an application. We did not use a database in our implementation, however, this file is still needed to keep dependencies intact.
