@@ -13,6 +13,6 @@ Our application is structed as follows:
 | templates | This folder contains the HTML files for our homepage, imageuploadpage, and resultspage. 
 | db.sqlite3 | This is the default Django database file created during the creation of an application. We did not use a database in our implementation, however, this file is still needed to keep dependencies intact.
 | manage.py | This is a command-line utility that allows us to run our Django application. The command to run the server is: "python manage.py runserver".
-| requirements.txt | This is a text file that lists all python packages used for this application. This file was created as preparation for deploying our application in the cloud. (Coming soon in CS692!) 
+| requirements.txt | This is a text file that lists all python packages used for this application. This file was created as preparation for deploying our application in the cloud. _(Coming soon in CS692!)_ 
 
 For more information about running our application, please visit our [Installation Manual](https://github.com/jazzymaya/HiddenAgility/blob/master/ProjectDocs/Sprint%204/SymCheck%20Installation%20Manual.pdf) and [User Manual](https://github.com/jazzymaya/HiddenAgility/blob/master/ProjectDocs/Sprint%204/SymCheck%20User%20Manual.pdf)
