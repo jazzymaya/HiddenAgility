@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
 <div id="bkg">
-    <div id="whitebkg">
-        <head>
-            {% load static %}
-            <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}"/>
-            <title>SYMCheck</title>
-            <div style="text-align: center;">
-                <img src="{% static  'images/LH.PNG' %}" alt="HomeLogo" style="width:275px;height:200px;"/>
+	<div id="whitebkg">
+
+		<head>
+			{% load static %}
+			<link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}" />
+			<title>SYMCheck</title>
+			<div style="text-align: center;">
+				<img src="{% static  'images/LH.PNG' %}" alt="HomeLogo" style="width:275px;height:200px;"/>
             </div>
 
         </head>
@@ -17,19 +18,28 @@
         <div style="text-align: center;">
 
             <img src="{% static  'images/NiceBox.PNG' %}" alt="NiceBox"
-                 style="max-width:100%;widows: 330px;height:250px;"/>
+                 style="max-width:100%;widows: 330px;height:215px;"/>
         </div>
         <div>
 
             <p class="headingHome">Welcome to SymCheck, an online image diagnosis application that will help you
                 identify what illness you may have. Our site and algorithm,
-                made with Django and tensorflow, has an accuracy of around 78%
+                created with Django and TensorFlow, has an accuracy of around 78%
                 and can help you make an informed decision on if or when you may
-                need a medical professional.</p>
+                need to seek advice or treatment from a medical professional.</p>
         </div>
         <div style="text-align: center;">
             <a href="{% url 'Imagepage'%}">Get Diagnosis Now ></a>
         </div>
+
+        <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+        <df-messenger
+          chat-icon="https:&#x2F;&#x2F;storage.googleapis.com&#x2F;cloudprod-apiai&#x2F;54615a55-7d1c-40bf-a2cd-bb55e2ad2209_x.png"
+          intent="WELCOME"
+          chat-title="SymCheck_bot"
+          agent-id="52506c28-7652-422c-8c7d-b6fef78013e2"
+          language-code="en"
+        ></df-messenger>
 
         </body>
     </div>
