@@ -15,4 +15,4 @@ Our application is structured as follows:
 | manage.py | This is a command-line utility that allows us to run our Django application. The command to run the server is: "python manage.py runserver".
 | requirements.txt | This is a text file that lists all the Python packages used for this application. This file was created in preparation for the deployment of our application on the Cloud. _(Coming soon in CS692!)_ 
 
-For more information about running our application, please see our [Installation Manual](https://github.com/jazzymaya/HiddenAgility/blob/master/ProjectDocs/Sprint%204/HiddenAgilitySymCheck%20Installation%20Manual.pdf) and [User Manual](https://github.com/jazzymaya/HiddenAgility/blob/master/ProjectDocs/Sprint%204/SymCheck%20User%20Manual.pdf)
+For more information about running our application, please see our [Installation Manual](https://github.com/jazzymaya/HiddenAgility/blob/master/ProjectDocs/Artifacts/SymCheck%20Installation%20Manual.pdf) and [User Manual](https://github.com/jazzymaya/HiddenAgility/blob/master/ProjectDocs/Sprint%204/SymCheck%20User%20Manual.pdf)
