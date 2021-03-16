@@ -22,6 +22,7 @@ urlpatterns = [
     path('', views.Homepage, name='Homepage'),
     path('Imagepage', views.Imagepage, name='Imagepage'),
     path('Results', views.Results, name='Results'),
+    path('FAQ', views.FAQ, name='FAQ'),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
