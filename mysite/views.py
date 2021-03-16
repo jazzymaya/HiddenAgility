@@ -42,7 +42,9 @@ def Imagepage(request):
 def Homepage(request):
     return render(request, 'Homepage.html')
 
-
+def FAQ(request):
+    return render(request, 'FAQ.html')
+    
 def Results(request):
     label = request.session.get('lab')
     confidence = request.session.get('con')
