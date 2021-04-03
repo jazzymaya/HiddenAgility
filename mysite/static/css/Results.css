@@ -1,0 +1,193 @@
+* {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+.banner {
+    display: flex;
+    width: 88%;
+    max-width: 575px;
+    height: 2px;
+    background-color: #75a9f9;
+
+}
+
+.container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+
+
+}
+
+.containerHome {
+    position: relative;
+    text-align: center;
+
+}
+
+
+.heading {
+    position: relative;
+    right: 0;
+    left: 0;
+    max-width: 500px;
+    min-width: 200px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    justify-content: center;
+    bottom: 175px;
+}
+
+.headingHome {
+    position: relative;
+    right: 0;
+    left: 0;
+    max-width: 400px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    justify-content: center;
+    bottom: 170px;
+    transform: 50%;
+}
+
+.textcenter {
+    right: 0;
+    left: 0;
+    max-width: 450px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    justify-content: center
+}
+
+
+.btnNew {
+    width: 149px;
+    height: 28px;
+    background-color: #008db1;
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-right: 10px;
+
+}
+
+.btnHome {
+    width: 80px;
+    height: 28px;
+    background-color: #008db1;
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-left: 10px;
+
+}
+
+.btnNearby {
+    background-color: #008db1;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 32px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: auto;
+    display: block;
+
+}
+
+.rowContainer {
+    display: flex;
+    flex-direction: row;
+    width: 88%;
+    max-width: 575px;
+    justify-content: space-between;
+    margin-bottom: 40px;
+
+}
+
+.txtInfo {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.txtBoxResult {
+    width: 1150px;
+    display: block;
+    margin: auto;
+    color: darkblue;
+    font-style: italic;
+    font-size: 22px;
+
+
+}
+
+.txtBoxAbout {
+    height: 112px;
+    width: 100%;
+    border: 2px solid black;
+    margin-bottom: 20px;
+    color: black;
+    overflow: auto;
+}
+
+.txtBoxDoc {
+    width: 900px;
+    display: block;
+    margin: auto;
+}
+
+.txtBoxNearby {
+    height: 102px;
+    width: 100%;
+    border: 2px solid black;
+    margin-bottom: 20px;
+    color: black;
+    overflow: auto;
+}
+
+.rBody {
+    display: flex;
+    align-items: center;
+    width: 88%;
+    height: 100%;
+    max-width: 575px;
+    flex-direction: column;
+
+}
+#map {
+    height: 500px;
+    width: 500px;
+  }
+
+
+  .centered {
+    display: flex;
+    align-items: center;
+}
+
+hr{
+    border: 0;
+    clear:both;
+    display:block;
+    width: 100%;              
+    background-color:#edf0f4;
+    height: 1px;
+}
+.popup {
+    background-color: white;
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-left: 575px;
+    margin-top: -60px;
+}
+
+.form-popup {
+    display: none;
+    position: absolute;
+    border: 3px solid #f1f1f1;
+}

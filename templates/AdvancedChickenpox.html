@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% load static %}
+<!--Header here-->
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/Advanced.css' %}"/>
+<body>
+    
+    <!--Body Starts Here-->  
+    <div class="center">
+        <h5 style="color:red; text-align: center; min-width: 90%;">**IF YOU ARE HAVING TROUBLE BREATHING HAVE CHEST PAINS, OR SEVERE BLEEDING,<br/>PLEASE HEAD TO THE NEAREST EMERGENCY ROOM**</h5>
+        <button class="btnNearby" onclick="openMap()">NEAREST</br>EMERGENCY ROOM</button>
+        
+        <div class="form-popup" id="MyMap">
+            <div class="popup">
+                <button class="btnNearby" onclick="closeMap()">BACK</button>
+                <div id="map"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!--Google Maps API Script-->
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGtBOJljLfXZwob9rXplHr9fy6P5bH5DA&callback=initMap&libraries=places" defer>
+    </script>
+    
+    <div class="qContainer">
+
+    <a href="{% url 'NewResults' %}"><button class="btnSkip" >SKIP TO RESULTS</button></a>
+    
+    <form action="AdvancedChickenpox" method="POST">
+
+    
+
+
+        
+            {% csrf_token %}
+
+        <p> 1. Have you had chickenpox in the past? </p>
+        <div class="rowContainer">
+        <input class="spacer" type="radio" id="yes" name="q1c" value="1" required ><p>Yes</p>
+        <input class="spacer" type="radio" id="no" name="q1c" value="0"><p>No</p>
+        </div>
+
+        <p> 2. If you had chickenpox in the past, were you less then 6 months old? </p>
+        <div class="rowContainer">
+        <input class="spacer" type="radio" id="yes" name="q2c" value="1" required><p>Yes</p>
+        <input class="spacer" type="radio" id="no" name="q2c" value="0"><p>No</p>
+        </div>
+
+        <p> 3. Do you have a fever?(Above 98.6 F or 37 C) </p>
+        <div class="rowContainer">
+        <input class="spacer" type="radio" id="yes" name="q3c" value="1" required><p>Yes</p>
+        <input class="spacer" type="radio" id="no" name="q3c" value="0"><p>No</p>
+        </div>
+
+        <p> 4. Are you experiencing any irritation in the affected area?(Burning, itching or tightness) </p>
+        <div class="rowContainer">
+        <input class="spacer" type="radio" id="yes" name="q4c" value="1" required><p>Yes</p>
+        <input class="spacer" type="radio" id="no" name="q4c" value="0"><p>No</p>
+        </div>
+        
+    </div>
+    <div class="center">
+        <button type="submit" class="btnNearby" >SUBMIT</button>
+    
+    </form> 
+    </div>
+
+    
+{% endblock %}

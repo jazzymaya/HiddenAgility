@@ -1,0 +1,69 @@
+.container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+.qContainer {
+    display: flex;
+    flex-direction: column;
+    margin-left: 200px;
+}
+.rowContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+
+.center {
+    text-align: center;
+}
+
+.btnNearby {
+    background-color: #008db1;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 32px;
+    font-size: 16px;
+    font-weight: bold;
+    align-self: center;
+    margin-bottom: 40px;
+}
+.btnSkip {
+    background-color: #008db1;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 32px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 200px;
+    
+}
+
+.popup {
+    background-color: white;
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-left: 575px;
+    margin-top: -60px;
+}
+
+.form-popup {
+    display: none;
+    position: absolute;
+    border: 3px solid #f1f1f1;
+}
+.spacer{
+    margin-left: 50px;
+}
+
+#map {
+    height: 500px;
+    width: 500px;
+}

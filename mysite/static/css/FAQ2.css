@@ -1,6 +1,5 @@
 * {
-    margin: 0;
-    padding: 0;
+
     font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 
@@ -11,6 +10,15 @@
     height: 2px;
     background-color: #75a9f9;
 
+}
+.infotxt{
+    
+    text-align: center;
+
+}
+.FAQ-box{
+    padding-top:30px;
+     padding-bottom: 60px;
 }
 
 .container {
@@ -97,12 +105,14 @@
 }
 
 .btnNearby {
-    width: 195px;
-    height: 42px;
-    background-color: #008db1;
-    border-radius: 8px;
-    align-self: center;
-
+     background-color: #008db1;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 32px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
 
 }
 
@@ -162,6 +172,7 @@
 
 .body {
     display: flex;
+    align-items: center;
     width: 88%;
     height: 100%;
     max-width: 575px;
@@ -170,10 +181,16 @@
 }
 .popup {
     background-color: white;
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-left: 575px;
+    margin-top: -60px;
 }
+
 .form-popup {
     display: none;
-    position: fixed;
+    position: absolute;
     border: 3px solid #f1f1f1;
 }
 
@@ -236,4 +253,104 @@
 #map {
     height: 500px;
     width: 500px;
+  }
+
+  .txtBoxQ {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 73px;
+    width: 100%;
+    overflow: auto;
+    background-color:#e6f9ff;
+    font-weight: bold;
+
+    
+}
+.Qtab {
+    height: 100%;
+    width: 5px;
+    background-color: #75a9f9;
+}
+.Question {
+    display: flex;
+    height: 100%;
+    width: 60px;
+    font-size: 3em;
+    color: #75a9f9;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+
+
+    
+}
+.txtBoxA {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    height: 73px;
+    width: 100%; 
+    color: #004466;
+    
+
+    
+}
+.Atab {
+    height: 100%;
+    width: 10px;
+    background-color: #004466;
+    font-weight: bold;
+    
+}
+.Answer {
+    display: flex;
+    height: 100%;
+    width: 60px;
+    font-size: 3em;
+    color: #004466;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    margin-left: 10px;
+    font-weight: bold;
+
+    
+}
+.bannerFAQ {
+    display: flex;
+    width: 80%;
+    max-width: 575px;
+    height: 2px;
+    background-color: #004466;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+
+}
+
+.txtBoxAdv {
+    display: flex;
+    align-items: center;
+    height: 73px;
+    width: 100%;
+    overflow: auto;
+    border-color: #004466;
+    border-bottom: solid;
+    border-top: solid;
+    font-weight: bold;
+    margin: 10px;
+    
+    
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: large;
+  }
+  th, td {
+    padding: 15px;
   }

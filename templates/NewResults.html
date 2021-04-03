@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+<!--Header here-->
+
+{% block content %}
+
+<body>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/Results.css' %}"/>
+    <!--Body Starts Here-->
+            
+            
+        <div class="infotxt">
+            <h5 style="color:red; text-align: center ;min-width: 90%;">**IF YOU ARE HAVING TROUBLE BREATHING HAVE CHEST PAINS, OR SEVERE BLEEDING,<br/>PLEASE HEAD TO THE NEAREST EMERGENCY ROOM**</h5>
+        <button class="btnNearby" onclick="openMap()">
+                    NEAREST<br/> EMERGENCY ROOM
+                </button>
+                 <div class="form-popup" id="MyMap" >
+                <div class="popup">
+                    <button class="btnNearby" onclick="closeMap()">
+                        Back
+                    </button>
+                    <div id="map"></div>
+
+                <script
+                 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGtBOJljLfXZwob9rXplHr9fy6P5bH5DA&callback=initMap&libraries=places"
+                 defer>
+                </script>
+            
+            </div>
+            </div>
+            </div>
+        <br/>
+        <h1 style= "text-align: center;">Results</h1>
+        <div class = "txtBoxDoc"> <!--I used this again to make the gray line be the same length as the others. This can be optimized later-->
+        <hr>
+        </div>
+        <br>
+        <div class="txtBoxResult">
+            Based on the submission provided,
+            your image indicates that you may have
+            <u>{{ label }}</u> with a confidence of <u>{{ confidence|floatformat:"2" }}</u>.
+        </div>
+        <br>
+        <div class="txtBoxDoc">
+        <h2 style= "text-align: center;">About</h2>
+        <hr>
+        <br>
+        {{ about|safe }}
+        <br><br>
+        <h2 style= "text-align: center;">When to See a Doctor</h2>
+        <hr>
+        <br>
+        {{ doc|safe }}
+        <br>
+        <br>
+        <br>
+        <br>
+        </div>
+        
+          
+
+{% endblock %}

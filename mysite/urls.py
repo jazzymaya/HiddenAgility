@@ -19,10 +19,14 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('', views.Homepage, name='Homepage'),
-    path('Imagepage', views.Imagepage, name='Imagepage'),
-    path('Results', views.Results, name='Results'),
-    path('FAQ', views.FAQ, name='FAQ'),
+    path('', views.NewHomepage, name = 'NewHome'),
+    path('Upload', views.NewUploadpage, name = 'NewUpload'),
+    path('NewFAQ', views.NewFAQpage, name = 'NewFAQ'),
+    path('AboutUs', views.NewAboutUspage, name = 'NewAboutUs'),
+    path('Results', views.NewResultspage, name='NewResults'), #It was changed to the New one don't delete
+    path('AdvancedPinkeye', views.AdvancedPinkeye, name='AdvancedPinkeye'),
+    path('AdvancedChickenpox', views.AdvancedChickenpox, name='AdvancedChickenpox'),
+    path('Advanced', views.Advanced, name='Advanced'),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

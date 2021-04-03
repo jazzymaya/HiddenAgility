@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+{% load static %}
+<!--Header here-->
+
+{% block content %}
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    {% load static %}-->
+            <!-- Link to CSS Page Change if needed-->
+<!--            <link rel="stylesheet" type="text/css" href="{% static 'css/Universal.css' %}"/>-->
+<!--            <link rel="stylesheet" type="text/css" href="{% static 'css/Aboutus.css' %}"/>-->
+<!--            <script src="{% static 'js/script.js' %}"></script>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>SymCheck About Us</title>-->
+<!--    <img class = "Logo" src="{% static  'images/SymCheckIcon.png' %}" alt="HomeLogo"/>-->
+<!--    <div class = "Topbar">-->
+<!--        <a class = "Toptext" href = "{% url 'NewHome'%}">Home</a>-->
+<!--        <a class = "Toptext" href = "{% url 'NewUpload'%}">Upload</a>-->
+<!--        <a class = "Toptext" href = "{% url 'NewFAQ'%}">FAQ</a>-->
+<!--        <a class = "Toptext" href = "{% url 'NewAboutUs'%}">About Us</a>-->
+<!--    </div>-->
+<!--</head>-->
+<title>SymCheck AboutUs</title>
+<body>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/Aboutus.css' %}"/>
+    
+    <!--Body Starts Here-->
+    <div class = "outerGrid">
+    <div class = "centerthis">
+        <div class = "aboutTitle">
+            <h2> What is SYMCheck?</h2>
+            <p>Welcome! SYMCheck is an online image diagnosis application that will help you identify what illness you may have.
+                Our site, which has been implemented with our algorithm made with Django and tensorflow, has an accuracy of over 78% 
+                and can help you make an informed decision on if or when you may need a medical professional.
+            </p>
+        </div>
+        <br>
+        <div class = "aboutTitle">
+            <h2>MEET THE TEAM!</h2>
+        </div>
+        <div class = "GridLeftPic"> <!--Outer of one person Start Pick Left-->
+            <div> <!--Image?-->
+                <img class = "aboutPic" src ="{% static  'images/MorganPic.PNG' %}"/>
+            </div>
+            <div> <!--Morgan text-->
+                <h4>Morgan Franklin: Cloud Engineer</h4>
+                <p>Morgan as our Cloud Engineer ensured that our collaberative work space was up and running along with our public site. She has also done an amazing job with technical documentation concerning the application. 
+                </p>
+            </div>
+        </div>
+        <hr>
+        <div class = "GridRightPic"> <!--Outer of one person Start Pick Left-->
+            <div> <!--Jasmine Text-->
+                <h4>Jasmine Washington: Scrum Master/Project Manager</h4>
+                <p>Jasmine as both out Project Manager and Scrum master kept everyone on task, checked in on all of us daily, and even assisted others with their work load. She is has amazing leadership skills that would put anyone to shame! 
+                </p>
+            </div>
+            <div> <!--Jasmine Image-->
+                <img class = "aboutPic" src ="{% static  'images/Jasmine.PNG' %}"/>
+            </div>
+        </div>
+        <hr>
+        <div class = "GridLeftPic"> <!--Outer of one person Start Pick Left-->
+            <div> <!--Sayema-->
+                <img class = "aboutPic" src ="{% static  'images/SayemaPic.jpg' %}"/>
+            </div>
+            <div> <!--Sayema text-->
+                <h4>Sayema Islam: Product owner/Developer</h4>
+                <p>Sayema Islam as our product owner came up with this brilliant idea that would help out many people during this crises in an effort to minimize exposer! She has also been organizing any code and writing all technical documents. 
+                </p>
+            </div>
+        </div>
+        <hr>
+        <div class = "GridRightPic"> <!--Outer of one person Start Pick Left-->
+            <div> <!--Swapnil Text-->
+                <h4>Swapnil Kadekar: Machine learning Engineer</h4>
+                <p>Swapnil Kadekar as our Machine learning engineer designed and implemented an amazing algorithm using Tensorflow, Keras, and python. 
+                </p>
+            </div>
+            <div> <!--Swapnil Image-->
+                <img class = "aboutPic" src ="{% static  'images/SwapnilPic.PNG' %}"/>
+            </div>
+        </div>
+        <hr>
+        <div class = "GridLeftPic"> <!--Outer of one person Start Pick Left-->
+            <div> <!--Briana-->
+                <img class = "aboutPic" src ="{% static  'images/BrianaPic.PNG' %}"/>
+            </div>
+            <div> <!--Briana text-->
+                <h4>Briana Figueroa: Front-end Developer/Designer</h4>
+                <p>Briana Figueroa as our front-end developer developed several of our pages as well as making them reactive for mobile users with HTML, CSS, and JavaScript. She also as our designer she created our page layout as well as the artwork. 
+                </p>
+            </div>
+        </div>
+        <hr>
+        <div class = "GridRightPic"> <!--Outer of one person Start Pick Left-->
+            <div> <!--Alan Text-->
+                <h4>Alan Singleton: Full-Stack Developer </h4>
+                <p>Alan Singleton as our Full-stack developer, implemented several of the pages HTML, CSS, and JavaScript. He has also set up the backend of our application to implement the results of our algorithm with python. 
+                </p>
+            </div>
+            <div> <!--Alin Image-->
+                <img class = "aboutPic" src ="{% static  'images/AlanPic.PNG' %}"/>
+            </div>
+        </div>
+        <br>
+    </div>
+
+
+</div>
+   
+    <!--Body Ends Here-->
+    <!--Footer Starts here-->
+{% endblock %}

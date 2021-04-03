@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+<!--Header here-->
+
+{% block content %}
+
+<title>SymCheck HomePage</title>
+<body>
+<link rel="stylesheet" type="text/css" href="{% static 'css/Home.css' %}"/>
+     <div class ="HomeGrid">
+        <div>
+            
+                <!-- <div class = "Gridtext">
+                    <p><h2>Illness Image Recognition at its Finest</h2>
+                        Welcome to SymCheck, an illness diagnosis app that can help you identify your problems with an image of the effected area! Our algorithm is 78% accurate and will be able to give advice on how best to handle your illness!</p>
+                </div> -->
+                <img class="GridImage1" src ="{% static  'images/Dots_Blue_WithWords2.PNG' %}">
+                <br>
+                <div>
+                    <button class = "btn">CHECK OUT A QUICK DEMO</button>
+                  </div>
+                  <div>
+                   <a href="{% url 'NewUpload'%}"> <button class = "btn" style="cursor: pointer;">UPLOAD IMAGES</button></a>
+                  </div>
+                <br>
+                
+                 </a>
+
+                
+            <!--Images goes here with text-->
+        </div>
+        <div>
+            <div class = "Slider">
+                <!-- <img style="width: 400px; border-radius: 50%;" src ="{% static  'images/Untitled-1.PNG' %}"> -->
+                <!--Other Image with carasel-->
+                
+            </div>
+        </div>
+    </div>
+   
+    
+{% endblock %}
