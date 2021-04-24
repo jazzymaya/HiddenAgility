@@ -1,0 +1,108 @@
+html, body{
+
+    margin:0;
+    padding:0;
+}
+.outerGrid{
+    position: relative;
+    justify-self: center;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns:1fr;
+     
+}
+.GridLeftPic{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    column-gap: 10px;
+}
+.GridRightPic{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    column-gap: 10px;
+}
+
+hr{
+    border: 0;
+    clear:both;
+    display:block;
+    width: 100%;              
+    background-color:#edf0f4;
+    height: 1px;
+}
+.aboutPic{
+    width: 200px;
+}
+.aboutTitle{
+    text-align: center;
+}
+.centerthis {
+    align-self: center;
+    justify-self: center;
+    width: 700px;
+  }
+  footer{
+   
+    bottom: 0;
+    width:100%;
+    
+}
+  .FAQ{
+    bottom: 0%;
+    background-color:#edf0f4;
+    padding: 0;
+    left: 0%;
+    width: 100%;
+    font-size: small;
+}
+.BigScreen{
+    display: inline;
+}
+.mobileScreen{
+    display: none;
+}
+
+@media(max-width: 500px){
+    .GridLeftPic{
+        justify-self: center;
+        justify-content: center;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        max-width: 500px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
+    .GridRightPic{
+        justify-self: center;
+        justify-content: center;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        max-width: 500px;
+        width: auto;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        
+
+    }
+    .centerthis {
+        align-self: center;
+        justify-self: center;
+        justify-content: center;
+        justify-items: center;
+        max-width: 500px;
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    .BigScreen{
+        display: none;
+    }
+    .mobileScreen{
+        display: inline;
+    }
+    
+}

@@ -5,17 +5,31 @@
 {% block content %}
 
 <body>
+<<<<<<< HEAD
     <link rel="stylesheet" type="text/css" href="{% static 'css/Results.css' %}"/>
     <!--Body Starts Here-->
             
             
         <div class="infotxt">
             <h5 style="color:red; text-align: center ;min-width: 90%;">**IF YOU ARE HAVING TROUBLE BREATHING HAVE CHEST PAINS, OR SEVERE BLEEDING,<br/>PLEASE HEAD TO THE NEAREST EMERGENCY ROOM**</h5>
+=======
+    
+    
+    <link rel="stylesheet" type="text/css" href="{% static 'css/Results.css' %}"/>
+    
+    <!--Body Starts Here-->
+         
+            <h5 style="color:red; text-align: center ;min-width: 90%; font-family: Trebuchet MS;">**IF YOU ARE HAVING TROUBLE BREATHING HAVE CHEST PAINS, OR SEVERE BLEEDING,<br/>PLEASE HEAD TO THE NEAREST EMERGENCY ROOM**</h5>
+>>>>>>> 366feb1d0d78544c8838c081eb706cbc882f81ad
         <button class="btnNearby" onclick="openMap()">
                     NEAREST<br/> EMERGENCY ROOM
                 </button>
                  <div class="form-popup" id="MyMap" >
+<<<<<<< HEAD
                 <div class="popup">
+=======
+                 <div class="popup">
+>>>>>>> 366feb1d0d78544c8838c081eb706cbc882f81ad
                     <button class="btnNearby" onclick="closeMap()">
                         Back
                     </button>
@@ -26,6 +40,7 @@
                  defer>
                 </script>
             
+<<<<<<< HEAD
             </div>
             </div>
             </div>
@@ -33,6 +48,39 @@
         <h1 style= "text-align: center;">Results</h1>
         <div class = "txtBoxDoc"> <!--I used this again to make the gray line be the same length as the others. This can be optimized later-->
         <hr>
+=======
+            
+            
+            </div>
+            </div>
+            
+            
+        <br/>
+        
+        
+       
+        
+        <h1 style= "text-align: center; font-family: Trebuchet MS;">Results</h1>
+        
+        
+        <div class = "txtBoxDoc"> <!--I used this again to make the gray line be the same length as the others. This can be optimized later-->
+        <hr>
+        {% if confidence < 66 %}
+        <div class="progress">
+                    <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: {{ confidence }}% " aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ confidence|floatformat:"0" }}%</div>
+        </div>
+        
+        {% elif label == "Normal Eye" or label == "Normal Skin" %}
+        <div class="progress">
+                    <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: {{ confidence }}% " aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ confidence|floatformat:"0" }}%</div>
+        </div>
+        
+        {% elif label == "Chickenpox" or label == "Pink Eye" %}
+        <div class="progress">
+                    <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: {{ confidence }}% " aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ confidence|floatformat:"0"  }}%</div>
+        </div>
+        {% endif%}
+>>>>>>> 366feb1d0d78544c8838c081eb706cbc882f81ad
         </div>
         <br>
         <div class="txtBoxResult">
@@ -45,12 +93,28 @@
         <h2 style= "text-align: center;">About</h2>
         <hr>
         <br>
+<<<<<<< HEAD
         {{ about|safe }}
+=======
+        {% if conchanged %}
+            {{ about|safe }}
+        {% else %}
+            {{ about2|safe }}
+        {% endif %}
+>>>>>>> 366feb1d0d78544c8838c081eb706cbc882f81ad
         <br><br>
         <h2 style= "text-align: center;">When to See a Doctor</h2>
         <hr>
         <br>
+<<<<<<< HEAD
         {{ doc|safe }}
+=======
+        {% if conchanged %}
+            {{ doc|safe }}
+        {% else %}
+            {{ doc2|safe }}
+        {% endif %}
+>>>>>>> 366feb1d0d78544c8838c081eb706cbc882f81ad
         <br>
         <br>
         <br>
@@ -58,5 +122,10 @@
         </div>
         
           
+<<<<<<< HEAD
 
 {% endblock %}
+=======
+<body>
+{% endblock %}
+>>>>>>> 366feb1d0d78544c8838c081eb706cbc882f81ad

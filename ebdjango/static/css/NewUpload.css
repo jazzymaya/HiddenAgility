@@ -1,0 +1,153 @@
+div{
+   
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.emergency {
+    text-align: center;
+}
+
+.btnNearby {
+    background-color: #008db1;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 32px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+.container {
+    padding: 50px;
+    display: flex;
+}
+
+.imageGuidelines {
+    flex: 1;
+}
+
+.imageUpload {
+    margin-right: 20px
+}
+
+.mini-container {
+    text-align: center;
+    padding: 50px;
+    width: 575px;
+
+}
+
+
+.btnUpload {
+    background-color: #008db1;
+    color: white;
+    border: none;
+    padding: 20px;
+    border-radius: 64px;
+    width: 200px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+
+.btnSubmit {
+    background-color: #008db1;
+    color: white;
+    border: none;
+    padding: 20px;
+    width: 200px;
+    border-radius: 64px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.popup {
+    position: relative;
+    margin: 0 auto;
+    top: 25%;
+    z-index: 1;
+    
+}
+
+.form-popup {
+    width: 100%;
+    height: 125%;
+    top: 0;
+    position: absolute;
+    display: none;
+    background-color: rgba(0,0,0,.7);
+    
+}
+.submitButtonLable{
+    cursor: pointer; 
+    padding: 2em; 
+    margin: -2em;
+}
+
+#map {
+    height: 500px;
+    width: 500px;
+    margin-top:10px;
+}
+
+@media(max-width: 500px){
+    .container{
+        display:inline;
+    }
+    .imageGuidelines{
+        width: inherit;
+    }
+    .imageGuidelinesImage{
+        width:100%;
+        max-width:500px;
+    }
+    .imageUploadImages{
+        width:100%;
+        max-width:500px;
+        
+    }
+    .btnSubmit{
+        padding: 10px;
+        font-size: 20px;
+        width:inherit;
+        
+    }
+    .btnUpload{
+        padding: 10px;
+        font-size: 20px;
+        width:inherit;
+    }
+    .mini-container{
+        width:100%;
+        max-width:500px;
+        padding:0px;
+        display:inline;
+    }
+    .submitButtonLable{
+        width:inherit;
+        cursor: pointer; 
+        
+       
+    }
+        .popup {
+   max-width:500px;
+   width:100%;
+   overflow:auto;
+    
+}
+#map {
+   
+    height: 500px;
+    width: 100%;
+    align-content:center;
+  }
+  .form-popup {
+    background-size:cover;
+    overflow:auto;
+    
+}
+    
+}

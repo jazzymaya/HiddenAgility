@@ -6,6 +6,7 @@
 
 <title>SymCheck HomePage</title>
 <body>
+<<<<<<< HEAD
 <link rel="stylesheet" type="text/css" href="{% static 'css/Home.css' %}"/>
      <div class ="HomeGrid">
         <div>
@@ -37,6 +38,56 @@
             </div>
         </div>
     </div>
+=======
+    <link rel="stylesheet" type="text/css" href="{% static 'css/Home.css' %}"/>
+   
+         <div class ="HomeGrid">
+            <div>
+                
+                  
+                    <img class="GridImage1" src ="{% static  'images/BubblePic.PNG' %}">
+                    <br>
+                    <div>
+                        <button id = "Show-modal" class = "btn">CHECK OUT A QUICK DEMO</button>
+                      </div>
+                      <div>
+                       <a href="{% url 'NewUpload'%}"> <button class = "btn" style="cursor: pointer;">UPLOAD IMAGES</button></a>
+                      </div>
+                    <br>
+                    
+                     </a>
+    
+                    
+                <!--Images goes here with text-->
+            </div>
+            <div>
+                <div class = "Slider">
+                    <!-- <img style="width: 400px; border-radius: 50%;" src ="{% static  'images/Untitled-1.PNG' %}"> -->
+                    <!--Other Image with carasel-->
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class ="modal modal___Hidden">
+            <div class = "modal___Content">
+                <div class = "modal___Closebar">
+                    <span onclick="document.getElementById('vid').pause();">X</span>
+                </div>
+                <br>
+                <video id = "vid" class = "vid" controls>
+                    <source src="https://drive.google.com/uc?export=download&id=1-ACiBluGjonNctLSJXra2DbrbRMLMpAe" type='video/mp4'>
+                    
+                </video>
+                
+                
+            </div>
+            
+        </div>
+         <script src="{% static 'js/Home.js' %}"></script>
+</body>
+>>>>>>> 366feb1d0d78544c8838c081eb706cbc882f81ad
    
     
 {% endblock %}
