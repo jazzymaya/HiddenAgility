@@ -26,15 +26,6 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGtBOJljLfXZwob9rXplHr9fy6P5bH5DA&callback=initMap&libraries=places" defer>
     </script>
     
-<<<<<<< HEAD
-    <div class="container">
-        <div class="imageGuidelines">
-            <img src="{% static 'images/ImageUploadGuidelines.png' %}" alt="Upload instructions graphic"/>
-        </div>
-        
-        <div class="imageUpload">
-            <img id="output" src="{% static 'images/ImageUploadArea.png' %}" alt="Image upload area graphic"/>
-=======
 {% if messages %}
         {% for message in messages %}
          {% if message.tags %}  <script>alert("{{ message }}")</script> {% endif %}
@@ -50,27 +41,14 @@
         
         <div class="imageUpload">
             <img class = "imageUploadImages" id="output" src="{% static 'images/ImageUploadArea.png' %}" alt="Image upload area graphic"/>
->>>>>>> 366feb1d0d78544c8838c081eb706cbc882f81ad
             
             <div class="mini-container">
                 <form method="post" enctype="multipart/form-data"> <!--Upload Image to media file-->
                     {%csrf_token%}
                     <a><input type="file" style="display: none;" accept="image/x-png,image/jpeg" name="image" id="file" onchange="loadFile(event)" required/></a>
-<<<<<<< HEAD
-                    <button class="btnUpload" type="button"><label for="file" style="cursor: pointer; padding: 2em; margin: -2em;">Upload Image</label></button>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <button class="btnSubmit" onclick="Advanced" type="BrowseComputer">Submit</button>
-                    
-                    <!--{%csrf_token%}-->
-                    <!--<a><input type="file" style="display: none;" accept="image/x-png,image/jpeg" name="image" id="file" onchange="loadFile(event)" required/></a>-->
-                    <!--<button type="button" style="width: 100px; height: 30px; background-color: #008db1; border-radius: 10px; margin-top: 10px; margin-left: 10px;"><label onclick = "Empty('output')" for="file"  style="cursor: pointer; padding:2em; margin:-2em">Upload Image</label></button>-->
-                    <!--Only allow png or jpeg files, so far browse only-->
-                    <!--<button type="BrowseComputer" style="cursor: pointer; width: 100px; height: 30px; background-color: #008db1; border-radius: 10px; margin-top: 10px; margin-left: 10px;">Submit</button>-->
-=======
                     <button class="btnUpload" type="button"><label for="file" class = "submitButtonLable">Upload Image</label></button>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <button class="btnSubmit" type="BrowseComputer">Submit</button>
->>>>>>> 366feb1d0d78544c8838c081eb706cbc882f81ad
                 </form>
             </div>
         </div>
