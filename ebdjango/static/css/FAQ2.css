@@ -1,0 +1,149 @@
+* {
+
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+html, body{
+
+    margin:0;
+    padding:0;
+}
+
+
+
+
+
+.infotxt{
+    
+    text-align: center;
+
+}
+.FAQ-box{
+    padding-top:30px;
+     padding-bottom: 60px;
+}
+
+
+.btnNearby {
+     background-color: #008db1;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 32px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+
+
+
+.popup {
+    position: relative;
+    margin: 0 auto;
+    top: 25%;
+    z-index: 1;
+    
+}
+
+.form-popup {
+    width: 100%;
+    height: 125%;
+    top: 0;
+    position: absolute;
+    display: none;
+    background-color: rgba(0,0,0,.7);
+    background-size:cover;
+    
+}
+
+
+#map {
+    height: 500px;
+    width: 500px;
+    margin-top:10px;
+  }
+
+  .txtBoxQ {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 73px;
+    width: 100%;
+    overflow: auto;
+    background-color:#e6f9ff;
+    font-weight: bold;
+
+    
+}
+
+.Question {
+    display: flex;
+    height: 100%;
+    width: 60px;
+    font-size: 3em;
+    color: #75a9f9;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+
+
+    
+}
+.txtBoxA {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    height: auto;
+    width: 100%; 
+    color: #004466;
+  
+}
+
+.Answer {
+    display: flex;
+    height: 100%;
+    width: 60px;
+    font-size: 3em;
+    color: #004466;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    margin-left: 10px;
+    font-weight: bold;
+
+    
+}
+hr {
+    width: 80%;
+    height: 1px;
+    background-color: #004466;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+@media(max-width:500px){
+    
+    .popup {
+   max-width:500px;
+   width:100%;
+   overflow:auto;
+    
+}
+#map {
+   
+    height: 500px;
+    width: 100%;
+    align-content:center;
+  }
+  .form-popup {
+    background-size:cover;
+    overflow:auto;
+    
+}
+    
+}
+
+

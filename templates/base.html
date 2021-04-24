@@ -1,0 +1,110 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+<link rel="icon" href="{% static 'css/logo2.png' %}" type="image/png"
+            <!--Link to CSS Page Change if needed-->
+            
+            <link rel="stylesheet" type="text/css" href="{% static 'css/Universal.css' %}"/>
+            
+            
+            <script src="{% static 'js/script.js' %}"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <img class = "Logo" src="{% static  'images/SymCheckIcon.png' %}" alt="HomeLogo"/>
+    <div class = "Topbar">
+        <a class = "Toptext" href = "{% url 'NewHome'%}">Home</a>
+        <a class = "Toptext" href = "{% url 'NewUpload'%}">Upload</a>
+        <a class = "Toptext" href = "{% url 'NewFAQ'%}">FAQ</a>
+        <a class = "Toptext" href = "{% url 'NewAboutUs'%}">About Us</a>
+    </div>
+</head>
+
+{% block content %}
+
+{% endblock %}
+
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+        <df-messenger
+            chat-icon="https://i.postimg.cc/nhkRt23p/ChatIcon.png"
+            intent="WELCOME"
+            chat-title="SymCheck_bot"
+            agent-id="52506c28-7652-422c-8c7d-b6fef78013e2"
+            language-code="en"
+        >
+        </df-messenger>
+
+</body>
+
+<footer>
+    <div class = "footer">
+       <div class = "Contacts">
+          <h2 class="Contacts_Inner">Contact Us</h2>
+           <div>Email: <a href="mailto:symcheckapp@gmail.com?subject=Feedback for SymCheck&body=Dear SymCheck Team," target="_blank">symcheckapp@gmail.com</a> </div>
+           <div>FaceBook: <a href = "https://www.facebook.com/SYMCheck/" target="_blank">SYMCheck</a></div>
+           <div>Instagram: <a href = "https://www.instagram.com/symcheck8080/" target="_blank">symcheck8080</a></div>
+           <div>Twitter: <a href = "https://twitter.com/CheckSym" target="_blank"> twitter.com/CheckSym</a></div>
+       </div>
+       <div class = "footerGrid">
+           <div>
+              
+              <h4>SYMCHECK</h4>
+             
+              <a class="footerLink" href = "{% url 'NewHome'%}">Home</a>
+              <br>
+              <br>
+              <a class="footerLink" href = "{% url 'NewUpload'%}">Upload</a>
+              <br>
+              <br>
+              <a class="footerLink" href = "{% url 'NewFAQ'%}">FAQ</a>
+              <br>
+              <br>
+              <a class ="footerLink" href = "{% url 'NewAboutUs'%}">About Us</a>
+               
+           </div>
+
+           <div>
+               
+               <h4>RESOURCES</h4>
+               <a class="footerLink" href = "https://www.djangoproject.com/" target="_blank">Django</a>
+               <br>
+               <br>
+               <a class="footerLink" href = "https://www.tensorflow.org/" target="_blank">Tensorflow</a>
+               <br>
+               <br>
+               <a class="footerLink" href = "https://keras.io/" target="_blank">Keras</a>
+               <br>
+               <br>
+               <a class ="footerLink" href = "https://aws.amazon.com/" target="_blank">AWS</a>
+               <br>
+               <br>
+               <a class ="footerLink" href = "https://developers.google.com/maps" target="_blank">Google Map API</a>
+           </div>
+
+           <div>
+               
+               <h4>SUPPORT</h4>
+              <a class="footerLink" href = "{% url 'NewFAQ'%}">FAQ</a>
+           </div>
+           
+           
+           
+           
+       </div>
+       <br>
+       <div class = "Disclaimer">
+           *This application is not run nor affiliated with any hospitals, urgent care, or any medical professional for official consultation contact your local physician or hospital.
+       </div>
+       <br>
+       <br>
+       <div>
+          <img class = "Symbol" src="{% static  'images/Symbol_gray.png' %}" alt="Symbol"/>
+          <span class = "Symboltext">© 2021 - www.symcheckapp.com Terms of Service Privacy Policy</span>
+       </div>
+
+
+   </div>
+</footer>
+</html>

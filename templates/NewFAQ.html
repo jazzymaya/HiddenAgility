@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+{% load static %}
+<!--Header here-->
+
+{% block content %}
+<title>SymCheck FAQ</title>
+
+<body>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/FAQ2.css' %}"/>
+    
+    <!--Body Starts Here-->
+    
+
+            
+            <div class="infotxt">
+                        <h5 style="color:red; text-align: center ;min-width: 90%;">**IF YOU ARE HAVING TROUBLE BREATHING HAVE CHEST PAINS, OR SEVERE BLEEDING,<br/>PLEASE HEAD TO THE NEAREST EMERGENCY ROOM**</h5>
+                        
+           
+           <button class="btnNearby" onclick="openMap()">
+                    NEAREST<br/> EMERGENCY ROOM
+                </button>
+                 <div class="form-popup" id="MyMap" >
+                <div class="popup">
+                    <button class="btnNearby" onclick="closeMap()">
+                        Back
+                    </button>
+                    <div id="map"></div>
+            </div>
+
+                <script
+                 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGtBOJljLfXZwob9rXplHr9fy6P5bH5DA&callback=initMap&libraries=places"
+                 defer>
+                </script>
+            
+            </div>
+            </div>
+            
+            <div class="FAQ-box">
+                <div class="body_FAQ">
+                <div class="txtBoxQ">
+                    <div class="Question">
+                        Q.
+                    </div>
+                    What diseases does SymCheck diagnose?
+                </div>
+                <div class="txtBoxA">
+                    <div class="Answer">
+                        A. 
+                    </div>
+                    At this current stage in SymCheck's developpment, the SymCheck can detect chickenpox and pinkeye through photo recognition, but is looking to expand this in the future.
+                </div>
+                </div>
+                <div class="body_FAQ">
+                <div class="txtBoxQ">
+                    <div class="Question">
+                        Q.
+                    </div>
+                    How does my advanced diagnosis question responses attribute to my confidence level?
+                </div>
+                <div class="txtBoxA">
+                    <div class="Answer">
+                        A.
+                    </div>
+                    By answering the questions on our advanced diagnosis page, your confidence level could either increase or decrease depending on your response. There are some symptoms to diseases that cannot be recognized visually, so this feature allows you to have a more accurate prediction. 
+                </div>
+                </div>
+                <div class="body_FAQ">
+                <div class="txtBoxQ">
+                    <div class="Question">
+                        Q.
+                    </div>
+                    What is the best way to reach the developers?
+                </div>
+                <div class="txtBoxA">
+                    <div class="Answer">
+                        A.
+                    </div>
+                    If you would like to leave feedback, comments or concerns you can email our team at symcheckapp@gmail.com. You can find the link to email us at the bottom of the page.
+                </div>
+                </div>
+                <div class="body_FAQ">
+
+                <div class="txtBoxQ">
+                    <div class="Question">
+                        Q.
+                    </div>
+                    What is the best photo format to upload?
+                </div>
+                <div class="txtBoxA">
+                    <div class="Answer">
+                        A.
+                    </div>
+                    When uploading your photo, be sure that it is saved as JPG or PNG. For best results, capture the area of concern as closely and clearly as possible. Do not add filters or edit the photo.
+                </div>
+                 </div>
+                
+                <div class="body_FAQ">
+                <div class="txtBoxQ">
+                    <div class="Question">
+                        Q.
+                    </div>
+                    How does SymCheck diagnose diseases?
+                </div>
+                <div class="txtBoxA">
+                    <div class="Answer">
+                        A.
+                    </div>
+                    SymCheck uses a trained machine learning-based model to classify your uploaded image. This model is currently 78% accurate and does not use any trained professional knowledge.
+                </div>
+                
+                 </div>
+
+                
+                <div class="body_FAQ">
+                    
+                </div>
+
+                </div>
+                
+{% endblock %}

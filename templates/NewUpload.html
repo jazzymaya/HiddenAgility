@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% load static %}
+<!--Header here-->
+
+{% block content %}
+<title>SymCheck Upload</title>
+
+<body>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/NewUpload.css' %}"/>
+    <!--Body Starts Here-->
+    <div class="emergency">
+        <h5 style="color:red; text-align: center; min-width: 90%;">**IF YOU ARE HAVING TROUBLE BREATHING HAVE CHEST PAINS, OR SEVERE BLEEDING,<br/>PLEASE HEAD TO THE NEAREST EMERGENCY ROOM**</h5>
+        <button class="btnNearby" style="cursor: pointer;" onclick="openMap()">NEAREST</br>EMERGENCY ROOM</button>
+        
+        <div class="form-popup" id="MyMap">
+            <div class="popup">
+                <button class="btnNearby" onclick="closeMap()">BACK</button>
+                <div id="map"></div>
+            </div>
+            </div>
+    </div>
+    
+    <!--Google Maps API Script-->
+    <script src="{% static 'js/script.js' %}"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGtBOJljLfXZwob9rXplHr9fy6P5bH5DA&callback=initMap&libraries=places" defer>
+    </script>
+    
+{% if messages %}
+        {% for message in messages %}
+         {% if message.tags %}  <script>alert("{{ message }}")</script> {% endif %}
+
+        {% endfor %}
+
+{% endif %}
+    
+    <div class="container">
+        <div class="imageGuidelines">
+            <img class = "imageGuidelinesImage"src="{% static 'images/ImageUploadGuidelines.png' %}" alt="Upload instructions graphic"/>
+        </div>
+        
+        <div class="imageUpload">
+            <img class = "imageUploadImages" id="output" src="{% static 'images/ImageUploadArea.png' %}" alt="Image upload area graphic"/>
+            
+            <div class="mini-container">
+                <form method="post" enctype="multipart/form-data"> <!--Upload Image to media file-->
+                    {%csrf_token%}
+                    <a><input type="file" style="display: none;" accept="image/x-png,image/jpeg" name="image" id="file" onchange="loadFile(event)" required/></a>
+                    <button class="btnUpload" type="button"><label for="file" class = "submitButtonLable">Upload Image</label></button>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button class="btnSubmit" type="BrowseComputer">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!--Image Submission Script-->
+    <script>
+    function Empty(elementID){
+        document.getElementById(elementID).src = " ";
+    }
+
+    var loadFile = function(event) {
+    var image = document.getElementById('output');
+    image.src = URL.createObjectURL(event.target.files[0]);
+    }
+    </script>
+    
+
+
+{% endblock %}

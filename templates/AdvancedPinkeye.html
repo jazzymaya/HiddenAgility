@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+<!--Header here-->
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/Advanced.css' %}"/>
+    <!--Body Starts Here-->  
+    <div class="center">
+        <h5 style="color:red; text-align: center; min-width: 90%;">**IF YOU ARE HAVING TROUBLE BREATHING HAVE CHEST PAINS, OR SEVERE BLEEDING,<br/>PLEASE HEAD TO THE NEAREST EMERGENCY ROOM**</h5>
+        <button class="btnNearby" onclick="openMap()">NEAREST</br>EMERGENCY ROOM</button>
+        
+        <div class="form-popup" id="MyMap">
+            <div class="popup">
+                <button class="btnNearby" onclick="closeMap()">BACK</button>
+                <div id="map"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!--Google Maps API Script-->
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGtBOJljLfXZwob9rXplHr9fy6P5bH5DA&callback=initMap&libraries=places" defer>
+    </script>
+    
+    <div class="qContainer">
+        
+    <a href="{% url 'NewResults' %}"><button class="btnSkip" >SKIP TO RESULTS</button></a>
+    
+    <form method="post">
+
+
+
+        
+            {% csrf_token %}
+
+        <p> 1. Do your eyes feel itchy? </p>
+        <div class="rowContainer">
+        <input class="spacer" type="radio" id="yes" name="q1" value="1" required><p>Yes</p>
+        <input class="spacer" type="radio" id="no" name="q1" value="0"><p>No</p>
+        </div>
+
+        <p> 2. Is there a gritty feeling in your eyes? </p>
+        <div class="rowContainer">
+        <input class="spacer" type="radio" id="yes" name="q2" value="1" required><p>Yes</p>
+        <input class="spacer" type="radio" id="no" name="q2" value="0"><p>No</p>
+        </div>
+
+        <p> 3. Do one or both eyes form a crust during the night that may prevent your eyes from opening in the morning? </p>
+        <div class="rowContainer">
+        <input class="spacer" type="radio" id="yes" name="q3" value="1" required><p>Yes</p>
+        <input class="spacer" type="radio" id="no" name="q3" value="0"><p>No</p>
+        </div>
+
+        <p> 4. Have you experienced any tearing from your eyes? </p>
+        <div class="rowContainer">
+        <input class="spacer" type="radio" id="yes" name="q4" value="1" required><p>Yes</p>
+        <input class="spacer" type="radio" id="no" name="q4" value="0"><p>No</p>
+        </div>
+        
+    
+    <div class="center">
+        <button type="submit" class="btnNearby">SUBMIT</button>
+    </div>
+    </form>   
+    </div>
+    
+    
+
+
+{% endblock %}
+
+<!--Footer Starts Here-->
