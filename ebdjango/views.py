@@ -119,9 +119,7 @@ def NewResultspage(request):
                             Flashes,
                             Tubular vision (also known a Tunnel vision where one experiences a loss of peripheral vision),
                             Visual Snow (Or Visual Static).
-                        """
-    else:
-        about2 = """Your session has been lost. Please click on the "New Diagnosis" button and resubmit your image for a proper diagnosis!"""  
+                        """  
     
     context = {'label': label, 'confidence': confidence, 'about': about, 'doc': doc, 'about2': about2, 'doc2': doc2, 'conchanged': conchanged}
 
@@ -180,9 +178,7 @@ def AdvancedChickenpox(request):
                             Burning/itching sensation,
                             Numbness,
                             Acute Pain with or without stimuli.
-                        """
-        else:
-            about = """Your session has been lost. Please resubmit your image for a proper diagnosis!"""  
+                        """  
     
         request.session['abo'] = about
         request.session['doc'] = doc
@@ -262,8 +258,6 @@ def AdvancedPinkeye(request):
                             You develop a fever or other signs of an infection, such as swollen glands or fatigue;
                             You have an eye condition unrelated to conjunctivitis.
                         """
-        else:
-            about = """Your session has been lost. Please resubmit your image for a proper diagnosis!"""  
     
     
     
