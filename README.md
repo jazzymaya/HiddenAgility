@@ -3,7 +3,7 @@ Our application is structured as follows:
 | File Name   | Description                                                            |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ProjectDocs      | This folder contains all the Project Deliverable files featured on the project Wiki page.                                                                                                                                                        |
-| mysite     | This is the Django application folder where important files such as views.py, admin.py, and the migrations folder are housed.                                                                                                                                             |
+| ebdjango     | This is the Django application folder where important files such as views.py, admin.py, and the migrations folder are housed.                                                                                                                                             |
 | TeamPhotos   | This folder contains the photos of each team member that are used on the project Wiki page.                                                                                                                              |
 | media | This folder houses all the user-uploaded images submitted via the image upload page. If this folder is deleted, a new one will be automatically generated when a user uploads another image. 
 | models | This folder contains our machine learning model in .h5 format.
